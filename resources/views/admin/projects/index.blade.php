@@ -31,7 +31,7 @@
               </div>
               </td>
               <td>
-                <a href="">
+                <a href="{{route('admin.projects.edit', $item)}}">
                   <button class="btn btn-secondary">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </button>
