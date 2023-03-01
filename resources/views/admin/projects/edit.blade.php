@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid">
 
-    <form action="{{route('admin.projects.update', ['project' => $project['slug']])}}" method="POST">
+    <form action="{{route('admin.projects.update', $project->slug)}}" method="POST">
         @csrf
         @method('PUT')
         <div class="mb-3">
@@ -12,9 +12,7 @@
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Aggiungi descrizione</label>
-            <textarea rows="5" class="form-control" id="" aria-describedby="" name="content">
-                <input type="text" value={{ old('content') ?? $project['content'] }}>
-            </textarea>
+            <textarea rows="5" class="form-control" id="" aria-describedby="" name="content">{{old('content') ?? $project['content']}}</textarea>
         </div>
     
         <div class="form-group">
