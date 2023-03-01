@@ -1,6 +1,13 @@
 @extends('layouts.admin')
 
 @section('content')
+<div>
+  <a href="{{route('admin.projects.index')}}">
+      <button class="btn btn-secondary m-3">
+          <i class="fa-solid fa-arrow-left"></i>
+      </button>
+  </a>
+</div>
 <div class="container-fluid">
 
     <form action="{{route('admin.projects.store')}}" method="POST">

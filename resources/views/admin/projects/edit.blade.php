@@ -1,12 +1,19 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
+<div>
+    <a href="{{route('admin.projects.index')}}">
+        <button class="btn btn-secondary m-3">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+    </a>
+  </div>
 <div class="container-fluid">
     <form action="{{route('admin.projects.update', $project->slug)}}" method="POST">
         @csrf
         @method('PUT')
         <div class="mb-3">
-          <label for="" class="form-label">Mofifica title</label>
+          <label for="" class="form-label">Modifica title</label>
           <input value="{{ old('title') ?? $project['title'] }}" type="text" class="form-control" id="" aria-describedby="" name="title">
         </div>
         <div class="mb-3">
